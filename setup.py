@@ -1,5 +1,9 @@
 from setuptools import setup, find_packages
 
+
+with open("requirements.txt", "r") as f:
+    requirements = [line.strip() for line in f if line.strip() and not line.startswith("#")]
+
 setup(
     name = "package_name"
     , version = "0.1.0"
@@ -9,7 +13,7 @@ setup(
     , description = "Package Description"
     , packages = find_packages()
     , include_package_data=True
-    , install_requires=[]  # add dependencies here
+    , install_requires=requirements
     , python_requires='>=3.9'
     , test_suite='tests'
     # , package_data = {

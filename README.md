@@ -2,6 +2,30 @@
 > Description of Package and ability built into the application. 
 
 
+## VENV
+### Create a VENV
+```
+python -m venv venv
+```
+### Activate a VENV
+
+#### MACOS / Linux
+```
+source venv/bin/activate
+```
+
+
+#### Windows
+```
+# Command Prompt (cmd.exe)
+venv\Scripts\activate.bat
+
+# Powershell
+.\venv\Scripts\Activate.ps1
+```
+
+
+
 
 ## Build the Package 
 ```
@@ -12,7 +36,10 @@ pip install --upgrade build
 python -m build
 ```
 
-
+### Add Requirements Built in the VENV
+```
+pip freeze > requirements.txt
+```
 
 
 ## Install Package
